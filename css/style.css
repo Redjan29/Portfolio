@@ -1,0 +1,534 @@
+/*reset*/
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font: 1.6rem 'Encode Sans', sans-serif;
+    margin: 0;
+    text-transform: capitalize;
+    
+}
+h1,h2,h3,p,figure,ul,ol,section{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+a,button{
+    text-decoration: none;
+    padding: 0;
+    border: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-defaut:#222;
+    --color-primary:#E8F3E8;
+    --color-secondary: #274664;
+    --color-tertiaire:#2c3e50;
+    --color-defaut:#975102;
+    --color-header:#0A3409;
+
+}
+
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #222 #333;
+}
+*::-webkit-scrollbar {
+    width: .2rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #222;
+    outline: .1rem solid #333;
+}
+
+/*theme*/
+header{
+    line-height: 5rem;
+    text-align: center;
+    background: url(../asset/lune.webp) no-repeat scroll center center / cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center center;
+    /*position: fixed;*/
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+.menu{
+    position: absolute;
+    top: 2rem;
+    left: 145rem;
+    cursor: pointer;
+    z-index: 3;
+    font-weight: 700;
+    color: #fafafa;
+    font-size: 5rem;
+}
+header h1{
+    color:#000;
+    display: block;
+    padding-top: 20rem;
+    text-align: center;
+    max-width: 50rem;
+    font-size: 5rem;
+    margin: 0 auto;
+    font-weight: 700;
+}
+header h2{
+    color:#000;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80rem;
+    font-weight: 900;
+    padding-top: 1rem;
+    font-size: 3rem;
+}
+.bas{
+    max-width: 4.5%;
+    display: block;
+    margin: auto;
+    margin-top: -9rem;
+    position: static;
+    cursor: pointer;
+    border-radius: 9rem;
+    transition: 500ms ease-in-out;
+    background-color: #fff;
+}
+.bas:hover{
+    transform: translateY(-2rem) scale(1.1);
+}
+
+/*navigation*/
+header nav{
+    display: none;  /* pour cacher derriere le logo*/
+}
+.open{  /* background*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: block;
+    z-index: 10;
+    max-width: 100%;
+    transition: all .6s ease-in-out;
+    visibility: visible;
+    /*background-color: #3c4d44e1;*/
+    background-color: #000;
+
+}
+
+.open ul li{   /* la ligne du cadre*/
+    border-radius: 0.9rem;
+    margin: 2rem auto;
+    border: solid .1rem rgb(179, 173, 173);
+}
+.open ul li a{    /* intérieur u cadre*/
+    display: block;
+    background-color: rgb(11, 11, 19);
+    border-radius: 0.5rem;
+    padding: 1.2rem ;
+    color: #fff;
+
+}
+.open nav{
+    position: static;
+    display: block;
+    padding: 1.2rem;
+    margin-top: 5rem;
+    width: 35rem;
+}
+.open nav ul{
+    width: 100%; /* taille du cadre*/
+}
+
+/*main*/
+
+main{
+    z-index: 3;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+main section{
+    background-color: rgb(15, 11, 11);
+    /*box-shadow: 0.2rem 0.2rem 2rem rgb(140, 34, 45);*/
+    margin: 5rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+main section h3{
+    font-size: 3rem;
+    padding: 3rem 4rem;
+    color: #fff;
+}
+    
+main section figure figcaption{ 
+    text-align: center;
+    display: none;
+}
+main section .History{
+    font-size: 4.5rem;
+    font-weight: 800;
+    padding: 2rem 0rem 0rem 2rem;
+    color: #fff;
+}
+main section p{
+    font-size: 1.6rem;
+    padding: 2rem;
+    color: #fff;
+}
+main section ul li{
+    padding: 2rem;
+    color: #fff;
+}
+
+/*Expérience*/
+main .experience figure{
+    display: grid;
+    padding: 3rem 5rem;
+    width: auto;
+    grid-template-columns: repeat(2,1fr);
+}
+main .experience h2{
+    text-shadow: 0.25rem 0.25rem 0 #c0392b,.5rem .5rem 0 #e74c3c;
+}
+main .experience figure ul li h2{
+    text-shadow: none;
+}
+main .experience figure ul li a, main .formation figure ul li a{
+    color: #fff; 
+}
+main .experience figure ul{
+    border-radius: 0.5rem;
+    margin: 2rem;
+    border: solid .2rem #c0392b;
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    transition: all 0.5s ease-in-out;
+}
+
+/*compétence*/
+main section .container li{
+    margin: 0.5rem;
+    padding: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.container{
+    display: flex; 
+    padding: 3rem 5rem;
+    flex-direction: column;
+}
+
+.container li img{
+    max-width: 2.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item { max-width: 90%; background-color: #e7422f ;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #c0392b;}
+.item-1 { max-width: 80%; background-color: #f1970f;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #f1970f;}
+.item-2 { max-width: 50%; background-color: #ebeb15; border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #ebeb15;}
+.item-3 { max-width: 30%; background-color: #04fb0c;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #04fb0c;}
+
+.item-4 { max-width: 60%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
+.item-5 { max-width: 50%; background-color: #e9ecee;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #e9ecee;}
+
+.item-6 { max-width: 60%; background-color: #d222a9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #d222a9;}
+
+
+
+/* formation*/
+
+main .formation figure{
+    display: grid;
+    padding: 3rem 5rem;
+    width: auto;
+    grid-template-columns: repeat(3,1fr); 
+}
+main .formation figure ul{
+    border-radius: 0.5rem;
+    margin: 2rem;
+    border: solid .2rem #3498db;
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    transition: all 0.5s ease-in-out;
+}
+
+/* travaux*/
+
+main .travaux figure{
+    display: grid;
+    padding: 3rem 5rem;
+    width: auto;
+    grid-template-columns: repeat(2,1fr);
+}
+main .travaux figure ul{
+    border-radius: 0.5rem;
+    margin: 2rem;
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    transition: all 0.5s ease-in-out;
+}
+main .travaux ul{
+    background-color: rgb(54, 54, 54);
+    font-size: 2.3rem;
+    border-bottom: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: solid .2rem #27ae60;
+}
+
+/**/
+main .veille figure{
+    padding: 3rem 5rem;
+    width: auto;
+    grid-template-columns: repeat(2,1fr);
+}
+main .veille figure ul{
+    border-radius: 0.5rem;
+    margin: 2rem;
+    background-color: rgb(54, 54, 54);
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    transition: all 0.5s ease-in-out;
+}
+main .veille ul{
+    background-color: rgb(54, 54, 54);
+    font-size: 2.3rem;
+    border-bottom: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: solid .2rem #27ae60;
+}
+
+/* loisir*/
+
+main .loisir ul{
+    background-color: rgb(54, 54, 54);
+    font-size: 2.3rem;
+    box-shadow: 0.5rem 0.5rem 0.2rem rgba(49, 49, 49, 0.726);
+    margin: 2rem;
+    border-bottom: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: solid .2rem #12846dc7;
+    
+}
+main .loisir figure{
+    display: grid;
+    padding: 3rem 5rem;
+    width: auto;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+main .experience ul li, main .loisir ul li, main .formation ul li, main .travaux ul li{
+    text-align: center;
+}
+main .experience ul li img, main .formation ul li img{
+    display: block;
+    margin: 1rem auto;
+    max-width: 10rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+main .loisir ul li h2, main .formation ul li h2, main .travaux ul li h2{
+    text-shadow: none;
+}
+main .compet h2{
+    text-shadow: 0.25rem 0.25rem 0 #d35400,.5rem .5rem 0 #e67e22;
+}
+main .loisir h2{
+    text-shadow: 0.25rem 0.25rem 0 #12816b,.5rem .5rem 0 #15967c;
+}
+main .formation h2{
+    text-shadow: 0.25rem 0.25rem 0 #2980b9,.5rem .5rem 0 #3498db;
+}
+main .travaux h2{
+    text-shadow: 0.25rem 0.25rem 0 #27ae60,.5rem .5rem 0 #2ecc71;
+}
+main .loisir ul li img{
+    width: 20%;
+}
+main .travaux ul li img{
+    width: 20%;
+}
+
+
+
+/*up*/
+main .haut{
+    display: block;
+    max-width: 5%;
+    padding: 0.5rem;
+    margin: 0 auto;
+    transform: rotate(180deg) translateY(-2.5rem);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.haut:hover{
+    transform: translateY(2rem) scale(1.3) rotate(180deg);
+}
+
+/* PIED DE PAGE */
+
+footer{
+    color: #fff;
+    background-color: #222;
+    padding: 2rem;
+    border-top: solid 0.5rem rgba(17, 17, 17, 0.37);
+}
+footer ul{
+    padding: 1rem;
+}
+footer ul li{
+    margin: 0 auto;
+    
+}
+
+footer h2{
+    text-align: center;
+}
+footer p{
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+footer .link a img{
+    margin: 2rem;
+    max-width: 6rem;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+footer .contact{
+    max-width: 30rem;
+    margin: 0 auto;
+}
+footer .contact li a{
+    color: #fff;
+}
+footer .contact img{
+    max-width: 3rem;
+    margin: auto 1rem;
+    filter: invert(100%);
+    transform: translateY(1rem);
+}
+
+
+
+@media screen and (max-width: 60rem) {
+    main section #picture{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+    header .nav{
+        flex-direction: column;
+    }
+    header .nav ul li{
+        margin: 1rem auto;
+        width: 100%;
+    }
+    header .nav{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    header .burger{
+        padding-top: 1.2rem;
+        padding-left: 1rem;
+        display: block;
+    }
+    header{
+        padding: 1rem;
+        text-align: center;
+        background: url(../asset/BackgroundM.jpeg) no-repeat scroll center center / cover;
+        /*position: fixed;*/
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 1rem;
+        top: 0;
+    }
+    .open{
+        position: fixed;
+        height: 100vh;
+        z-index: 2;
+        width: 100%;
+        top: 0;
+        transition: all .3s;
+        right: 0;
+        visibility: visible;
+        background-color: #1e201f;
+    }
+    .open nav{
+        position: static;
+        display: block;
+        padding: 1rem;
+        margin-top: 10rem;
+        width: 100%;
+    }
+    header h1{
+        font-size: 2.5rem;
+    }
+    header h2{
+        font-size: 2rem;
+    }
+    main{
+        padding-top: 1rem;
+    }
+    .container{
+        padding: 1rem;
+    }
+    h3, h2{
+        text-align: center;
+    }
+    .container li{
+        font-size: 1.4rem;
+    }
+    main .experience figure, main .loisir figure, main .formation figure, main .travaux figure{
+        display: grid;
+        padding: 0;
+        grid-template-columns: repeat(1,1fr);
+    }
+    main .experience figure ul:hover, main .loisir figure ul:hover{
+        transform: none;
+        box-shadow: none;
+    }
+    .item-7 { max-width: 45%; background-color: #2980b9;border-radius: 1rem; box-shadow: 0.3rem 0.3rem 0rem #236ea0;}
+    footer .orga{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .link{
+        max-width: 5rem;
+    }
+    footer p{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    header h1 .material-icons{
+        display: inline-block;
+        padding-right: 2rem;
+    }
+    .caté{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media screen and (orientation: landscape){
+        .aside a img{
+            max-width: 5%;
+        }
+        
+    }
+}

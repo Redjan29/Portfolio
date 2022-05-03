@@ -1,0 +1,58 @@
+/*reset*/
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500;700;900&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Encode Sans', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    background-color: #333;
+}
+h1,h2,h3,p,figure,ul,ol,section{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+a,button{
+    text-decoration: none;
+    padding: 0;
+    border: 0;
+}
+img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	vertical-align: middle;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-defaut:#222;
+    --color-primary:#E8F3E8;
+    --color-secondary: #34495e;
+    --color-tertiaire:#1a3236;
+    --color-defaut:#975102;
+    --color-header:#0A3409;
+
+}
+
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #222 #333;
+}
+*::-webkit-scrollbar {
+    width: .2rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #222;
+    outline: .1rem solid #333;
+}
+
+/*theme*/
