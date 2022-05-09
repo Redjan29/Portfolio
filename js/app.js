@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
         el.classList.toggle("open");
         btn.innerHTML === "☰" ? btn.innerHTML = "X" : btn.innerHTML = "☰";
+
+    
         
     });
 });

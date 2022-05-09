@@ -265,7 +265,6 @@ footer .contact img{
     filter: invert(100%);
     transform: translateY(1rem);
 }
-
     main .up{
         position: fixed;
         max-width: 4rem;
