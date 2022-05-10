@@ -3,13 +3,15 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    background-color: #000;
 
 }
 
 body {
     font: 1.6rem "Roboto", sans-serif;
     margin: 0;
-    background-color: #2e2e2e;
+   
+    
 
 
 
@@ -58,20 +60,8 @@ header h2{
     color: #1b1b1b;
   }
 
-
-/* main ul li a{
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: .5rem;
-    border: solid .2rem rgba(17, 17, 17, 0.474);
-    background-color: #444;
-    font-weight: 300;
-    text-transform: capitalize;
-} */
 /*MAIN*/
-body{
-    background-color: #ebebeb;
-}
+
 
 main{
     padding: 2rem auto;
@@ -85,7 +75,7 @@ main h2{
 main section {
     width: 60vw;
     margin: 1rem auto;
-    background-color: #1b1b1b;
+    background-color: #474545;
     padding: 2rem;
     border-radius: 1.5rem;
     
